@@ -9,10 +9,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class QueueTest {
     private Queue<Integer> instance;
+
     @BeforeEach
     void startUp() {
         instance  = new Queue<>();
     }
+
     @Test
     void offer() {
         System.out.println("offer");
@@ -21,6 +23,7 @@ class QueueTest {
         int data = ((Node<Integer>) node).data;
         assertEquals( instance.peek().data, data );
     }
+
     @Test
     void peek() {
         System.out.println("peek");
